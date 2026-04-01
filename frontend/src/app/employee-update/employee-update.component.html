@@ -1,0 +1,29 @@
+
+<h1 class="text-center">Update Employee Form</h1>
+<br><hr>
+
+<div class="container" *ngIf="employee">
+
+    <form (ngSubmit)="updateEmp()"  >
+
+        <div class="form-group">
+            <label for="form1">Employee Name</label>
+            <input type="text" placeholder="Enter your Name " class="form-control" [(ngModel)]="employee.name" name="name" required>
+        </div><br>
+
+        <div class="form-group">
+            <label for="form1">Employee Tech</label>
+            <input type="text" placeholder="Enter your technology " class="form-control" [(ngModel)]="employee.tech" name="tech" required>
+        </div><br>
+
+        <div class="form-group">
+            <label for="form1">Employee Salary</label>
+            <input type="number" placeholder="Enter your salary " class="form-control" [(ngModel)]="employee.salary" name="salary" required>
+        </div>
+        <br><br>
+
+        <button type="submit" class="btn btn-info">Update Employee</button>
+
+    </form>
+
+</div>
